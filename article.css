@@ -1,0 +1,148 @@
+/* общие стили страниц: темно-синий фон с «чертежной» сеткой */
+body {
+    margin: 0;
+    padding-bottom: 40px;
+    background-color: #161a3a;
+    background-image:
+        linear-gradient(rgba(124, 140, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124, 140, 255, 0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+    font-family: "Segoe UI", Inter, Roboto, Arial, sans-serif;
+    color: #eef0ff;
+}
+
+.header {
+    position: relative;
+    width: 960px;
+    margin: 0 auto 28px;
+    padding-top: 28px;
+    min-height: 62px;
+}
+
+/* логотип по центру (страница архива) */
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archive {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* одна запись - карточка-«тикет» с цветной полосой слева */
+.one-post {
+    margin-bottom: 16px;
+    padding: 18px 24px 2px;
+    background: #1f2550;
+    border: 1px solid #2e3670;
+    border-left: 4px solid #7c8cff;
+    border-radius: 12px;
+}
+
+.post-title {
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #b9c2ff;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+    font-weight: 600;
+    color: #c9cdf2;
+}
+
+/* дата - янтарная «плашка» справа */
+.article-created-date {
+    float: right;
+    padding: 2px 12px;
+    border-radius: 999px;
+    background: rgba(255, 181, 71, 0.14);
+    color: #ffb547;
+    font-size: 14px;
+}
+
+.article-details {
+    clear: both;
+    margin: 0;
+    padding-top: 12px;
+    font-size: 14px;
+    color: #a3a9d6;
+}
+
+.article-text {
+    line-height: 1.6;
+    color: #dfe2fb;
+}
+
+/* ссылки-«таблетки» в правом верхнем углу шапки */
+.header-links {
+    position: absolute;
+    top: 41px;
+    right: 0;
+}
+
+.all-posts {
+    margin-left: 8px;
+    padding: 8px 16px;
+    border: 1px solid rgba(124, 140, 255, 0.4);
+    border-radius: 999px;
+    background: rgba(124, 140, 255, 0.12);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.all-posts:hover {
+    background: #7c8cff;
+    color: #161a3a;
+}
+
+/* стили страницы одной записи */
+.article .header img {
+    margin-left: 0;
+}
+
+.article .content {
+    box-sizing: border-box;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 32px;
+    background: #1f2550;
+    border: 1px solid #2e3670;
+    border-left: 4px solid #7c8cff;
+    border-radius: 12px;
+}
+
+.article h1 {
+    margin: 0 0 16px;
+    font-size: 30px;
+}
+
+.article .article-details {
+    padding: 9px 0;
+    border-bottom: 1px solid #2e3670;
+    font-size: 15px;
+    color: #c9cdf2;
+}
+
+.article .article-text {
+    margin: 18px 0 0;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: #181d44;
+}

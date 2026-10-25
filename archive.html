@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Архив заданий</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="archive-page">
+    <div class="header">
+        <img src="{% static 'img/logo.png' %}" />
+        <div class="header-links">
+            <a class="all-posts" href="{% url 'register' %}">Регистрация</a>
+            <a class="all-posts" href="{% url 'login' %}">Вход</a>
+        </div>
+    </div>
+    <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+            <h2 class="post-title"><a href="{% url 'get_task' post.id %}">{{ post.title }}</a></h2>
+            <div class="article-info">
+                <div class="article-author">Клиент: {{ post.client }}</div>
+                <div class="article-created-date">{{ post.issue_date }}</div>
+            </div>
+            <p class="article-details">Отдел: {{ post.department }}; исполнитель: {{ post.employee }}; трудоемкость: {{ post.hours }} ч; стоимость: {{ post.get_cost }} руб.</p>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

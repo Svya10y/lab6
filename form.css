@@ -1,0 +1,117 @@
+/* стили страниц с формами */
+.content {
+    box-sizing: border-box;
+    width: 760px;
+    margin: 32px auto;
+    padding: 28px 40px 32px;
+    background: #1f2550;
+    border: 1px solid #2e3670;
+    border-radius: 16px;
+}
+
+.content h1 {
+    margin: 0 0 8px;
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+}
+
+.field.wide {
+    grid-column: 1 / 3;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #a3a9d6;
+}
+
+input[type="text"], input[type="number"], input[type="date"],
+input[type="email"], input[type="password"], textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    border: 1px solid #343c7a;
+    border-radius: 8px;
+    background: #141838;
+    color: #eef0ff;
+    font-family: inherit;
+    font-size: 15px;
+    color-scheme: dark;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #6e75ad;
+}
+
+/* подсветка активного поля */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #7c8cff;
+    box-shadow: 0 0 0 3px rgba(124, 140, 255, 0.25);
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    padding: 11px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #7c8cff;
+    color: #161a3a;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #9aa6ff;
+}
+
+/* сообщение об ошибке - красная плашка, если текст есть */
+.errors {
+    min-height: 20px;
+    margin: 0 0 14px;
+    text-align: center;
+    font-weight: 600;
+    color: #ff8fa3;
+}
+
+.errors:not(:empty) {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 143, 163, 0.4);
+    border-radius: 8px;
+    background: rgba(255, 143, 163, 0.1);
+}
+
+/* узкая форма для страниц регистрации и входа */
+.content.narrow {
+    width: 400px;
+}
+
+.content.narrow form {
+    grid-template-columns: 1fr;
+}
+
+.content.narrow .field.wide {
+    grid-column: 1;
+}
+
+.back-link {
+    display: block;
+    margin-top: 18px;
+    text-align: center;
+    color: #b9c2ff;
+}
